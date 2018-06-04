@@ -1,4 +1,4 @@
-# CleverHans (latest release: v2.0.0)
+# CleverHans (latest release: v2.1.0)
 
 <img src="https://github.com/tensorflow/cleverhans/blob/master/assets/logo.png?raw=true" alt="cleverhans logo">
 
@@ -67,8 +67,11 @@ You may want to make that change permanent through your shell's profile.
 ### Currently supported setups
 
 Although CleverHans is likely to work on many other machine configurations, we
-currently [test it](https://travis-ci.org/tensorflow/cleverhans) with Python
-{2.7, 3.5} and TensorFlow {1.0, 1.1} on Ubuntu 14.04.5 LTS (Trusty Tahr).
+currently [test it](https://travis-ci.org/tensorflow/cleverhans) it with Python
+{2.7, 3.5} and TensorFlow {1.4, 1.8} on Ubuntu 14.04.5 LTS (Trusty Tahr).
+Support for TensorFlow 1.3 and earlier is deprecated. After 2018-11-1 we will
+not fix bugs reported for these versions and we will eliminate wrapper code
+needed for backwards compatibility with these versions.
 
 ## Tutorials
 
@@ -122,7 +125,7 @@ When reporting benchmarks, please:
 * Report any configuration variables used to determine the behavior of the attack.
 
 For example, you might report "We benchmarked the robustness of our method to
-adversarial attack using v2.0.0 of CleverHans. On a test set modified by the
+adversarial attack using v2.1.0 of CleverHans. On a test set modified by the
 `FastGradientMethod` with a max-norm `eps` of 0.3, we obtained a test set accuracy of 71.3%."
 
 ## Contributing
@@ -145,13 +148,17 @@ If you use CleverHans for academic research, you are highly encouraged
 (though not required) to cite the following [paper](https://arxiv.org/abs/1610.00768):
 
 ```
-@article{papernot2017cleverhans,
-  title={cleverhans v2.0.0: an adversarial machine learning library},
-  author={Nicolas Papernot, Nicholas Carlini, Ian Goodfellow, Reuben Feinman,
-  Fartash Faghri, Alexander Matyasko, Karen Hambardzumyan, Yi-Lin Juang, Alexey
-  Kurakin, Ryan Sheatsley, Abhibhav Garg, Yen-Chen Lin},
+@article{papernot2018cleverhans,
+  title={cleverhans v2.1.0: an adversarial machine learning library},
+  author={Nicolas Papernot and Fartash Faghri and Nicholas Carlini and
+  Ian Goodfellow and Reuben Feinman and Alexey Kurakin and Cihang Xie and
+  Yash Sharma and Tom Brown and Aurko Roy and Alexander Matyasko and
+  Vahid Behzadan and Karen Hambardzumyan and Zhishuai Zhang and
+  Yi-Lin Juang and Zhi Li and Ryan Sheatsley and Abhibhav Garg and 
+  Jonathan Uesato and Willi Gierke and Yinpeng Dong and David Berthelot and
+  Paul Hendricks and Jonas Rauber and Rujun Long},
   journal={arXiv preprint arXiv:1610.00768},
-  year={2017}
+  year={2018}
 }
 ```
 
@@ -193,17 +200,17 @@ The following authors contributed 100 lines or more (ordered according to the Gi
 * Karen Hambardzumyan (YerevaNN)
 * Zhishuai Zhang (Johns Hopkins)
 * Yi-Lin Juang (NTUEE)
-* Zhi Li
+* Zhi Li (University of Toronto)
 * Ryan Sheatsley (Pennsylvania State University)
 * Abhibhav Garg (IIT Delhi)
 * Jonathan Uesato (MIT)
 * Willi Gierke (Hasso Plattner Institute)
 * Yinpeng Dong (Tsinghua University)
 * David Berthelot (Google Brain)
-* Paul Hendricks
+* Paul Hendricks (NVIDIA)
 * Jonas Rauber (IMPRS)
-* Shuolongbj
+* Rujun Long (0101.AI)
 
 ## Copyright
 
-Copyright 2017 - Google Inc., OpenAI and Pennsylvania State University.
+Copyright 2018 - Google Inc., OpenAI and Pennsylvania State University.
